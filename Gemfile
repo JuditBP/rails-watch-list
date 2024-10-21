@@ -62,3 +62,14 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+# Before starting to code, don’t forget to setup your Rails app for Front-end.
+# Like in the lecture, let’s add the gems we’re going to need:
+gem "bootstrap", "~> 5.2"
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
+gem "sass-rails" # Uncomment this line
+
+gem 'ostruct'
+gem 'logger'
