@@ -1,0 +1,17 @@
+ <div class="container">
+  <p><strong>List.</strong> Here we will display my chosen list:</p>
+    <h3><%= @list.name %></h3>
+    <ul>
+      <% @list.movies.each do |movie| %>
+        <li>Movie: <%=movie.title  %></li>
+        <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+        <p><%= bookmark %></p>
+       <p><%= movie.overview %></p>
+       <%= link_to "Delete this bookmark", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <% end %>
+    </ul>
+<br> <%= link_to "Bookmark a movie", new_list_bookmark_path(@list) %>
+<p><%= link_to "Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %></p>
+
+<%= link_to "Go to the list index", lists_path, class:"btn btn-primary"%>
+</div>

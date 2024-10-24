@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div><h3>My lists of movies</h3></div>
+  <div class="container flex">
+    <%@lists.each do |list| %>
+    <%= link_to list_path(list),  class:"text-decoration-none" do %>
+      <div class="pt-1"><h3><%= list.name %></h3></div>
+      <div class="pt-1"><p>This list has: <%= list.bookmarks.count %> movies</p>
+    <% end %>
+    </div>
+  <% end %>
+  <br><h4><strong><%=  link_to "Create a new list", new_list_path, class:"text-decoration-none" %></strong></h4>
+
+
+</div>

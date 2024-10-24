@@ -73,3 +73,4 @@ gem "sass-rails" # Uncomment this line
 
 gem 'ostruct'
 gem 'logger'
+
